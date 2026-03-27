@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Cruce Semafórico - Hilos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Dashboard -->
+        <aside class="dashboard">
+            <header>
+                <h1>Panel de Control</h1>
+                <p>Simulación concurrente orientada a objetos</p>
+            </header>
+            
+            <section class="controls">
+                <button id="btn-start" class="btn primary">
+                    <span class="icon">▶</span> Iniciar Simulación
+                </button>
+                <button id="btn-stop" class="btn danger" disabled>
+                    <span class="icon">⏸</span> Pausar
+                </button>
+            </section>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Vehículos Totales</h3>
+                    <div class="value" id="stat-vehicles">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Peatones Totales</h3>
+                    <div class="value" id="stat-pedestrians">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Ciclo Norte-Sur</h3>
+                    <div class="value traffic-value" id="stat-tl-ns">Rojo</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Ciclo Este-Oeste</h3>
+                    <div class="value traffic-value" id="stat-tl-ew">Verde</div>
+                </div>
+            </section>
+        </aside>
+
+        <!-- Main Canvas Area -->
+        <main class="simulation-area">
+            <div class="canvas-wrapper">
+                <canvas id="simulationCanvas" width="800" height="800"></canvas>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

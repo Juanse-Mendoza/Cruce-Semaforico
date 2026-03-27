@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cruce-semaforico
+    env: static
+    buildCommand: "" # No requiere comando de construcción porque es HTML/CSS/JS estático
+    staticPublishPath: ./ # El directorio donde se encuentra el index.html
+    autoDeploy: true
